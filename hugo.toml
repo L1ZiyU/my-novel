@@ -11,3 +11,4 @@ theme = 'PaperMod'
     weight = 20
 [params]
   ShowPostNavLinks = true
+  hideSummary=true
