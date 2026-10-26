@@ -1,0 +1,13 @@
+baseURL = 'https://l1ziyu.pages.dev/'
+languageCode = 'zh-cn'
+defaultContentLanguage = "zh" 
+title = '黎梓语的小站'
+theme = 'PaperMod'
+
+[[menu.main]]
+    identifier = "categories"
+    name = "书架"
+    url = "/categories/"
+    weight = 20
+[params]
+  ShowPostNavLinks = true
