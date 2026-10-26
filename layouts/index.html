@@ -3,6 +3,6 @@
   {{- $pages = $pages.ByDate.Reverse }}
   
   {{- range first 3 $pages }}
-    {{- partial "entry.html" . }}
+    {{- partial "post-entry.html" . }}
   {{- end }}
 {{- end }}
