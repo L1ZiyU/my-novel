@@ -1,0 +1,27 @@
+{{- define "main" }}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $paginator := .Paginate (first 3 $pages) }}
+
+{{- if not $paginator.Pages }}
+  {{- if eq .Kind "term" }}
+    <header class="page-header">{{- i18n "no_posts_tag" }}{{ end }}</header>
+  {{- end }}
+{{- end }}
+
+{{- range $paginator.Pages }}
+  {{- partial "entry.html" . }}
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+  <footer class="page-footer">
+    <nav class="pagination">
+      {{- if $paginator.HasPrev }}
+        <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">«&nbsp;{{ i18n "prev_page" }}</a>
+      {{- end }}
+      {{- if $paginator.HasNext }}
+        <a class="next" href="{{ $paginator.Next.URL | absURL }}">{{ i18n "next_page" }}&nbsp;»</a>
+      {{- end }}
+    </nav>
+  </footer>
+{{- end }}
+{{- end }}
