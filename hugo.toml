@@ -13,5 +13,8 @@ theme = 'PaperMod'
   ShowPostNavLinks = true
   hideSummary=true
   disableSpecial1stPost = true
+  ShowSearch = true
 [pagination]
   pagerSize = 3
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
