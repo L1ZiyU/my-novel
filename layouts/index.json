@@ -1,0 +1,12 @@
+[
+{{- range .Site.RegularPages -}}
+{{- if (not .Params.hidden) -}}
+{
+    "title": "{{ .Title }}",
+    "permalink": "{{ .Permalink }}",
+    "content": "{{ .Plain | truncate 2000 }}",
+    "summary": "{{ .Plain | truncate 200 }}"
+},
+{{- end -}}
+{{- end -}}
+]
