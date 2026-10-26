@@ -21,13 +21,6 @@ theme = 'PaperMod'
   hideSummary = true
   disableSpecial1stPost = true
   ShowSearch = true
-  
-  # 核心修复：专门针对中文搜索的参数
-  [params.fuseOpts]
-    threshold = 0.8       # 放宽匹配精度
-    distance = 10000      # 忽略文字距离
-    ignoreLocation = true # 忽略位置
-    minMatchCharLength = 1 # 允许单个汉字搜索
 
 [pagination]
   pagerSize = 3

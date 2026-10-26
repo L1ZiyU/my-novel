@@ -1,12 +1,6 @@
-[
-{{- range .Site.RegularPages -}}
-{{- if (not .Params.hidden) -}}
-{
-    "title": {{ .Title | jsonify }},
-    "permalink": {{ .Permalink | jsonify }},
-    "content": {{ .Plain | truncate 2000 | jsonify }},
-    "summary": {{ .Plain | truncate 200 | jsonify }}
-},
+{{- $pages := where .Site.RegularPages "Params.hidden" "ne" true -}}
+{{- $data := slice -}}
+{{- range $pages -}}
+    {{- $data = $data | append (dict "title" .Title "permalink" .Permalink "content" (.Plain | truncate 2000) "summary" (.Plain | truncate 200)) -}}
 {{- end -}}
-{{- end -}}
-]
+{{- $data | jsonify -}}
