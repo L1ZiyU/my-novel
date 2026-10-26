@@ -1,0 +1,24 @@
+/* --- 小说阅读页：悬浮翻页导航栏 --- */
+.paginav {
+    position: fixed !important; /* 强制固定在屏幕上，不随内容滚动 */
+    bottom: 0 !important;      /* 贴在屏幕最底部 */
+    left: 0;
+    right: 0;
+    z-index: 999 !important;   /* 保证它显示在其他内容的最上层 */
+    margin: 0 !important;
+    padding: 12px 20px !important;
+    background: var(--theme) !important; /* 背景色跟随你的深浅色主题自动变化 */
+    border-top: 1px solid var(--border) !important; /* 顶部分隔线 */
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1) !important; /* 淡淡的阴影，更有层次感 */
+    border-radius: 0 !important; /* 去掉原来的圆角，让它更像底栏 */
+}
+
+/* 优化按钮内部文字排版 */
+.paginav a {
+    font-weight: 600;
+}
+
+/* 给文章底部留出空白，防止内容被悬浮栏挡住 */
+.post-content {
+    padding-bottom: 80px !important;
+}

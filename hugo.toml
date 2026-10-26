@@ -21,6 +21,7 @@ theme = 'PaperMod'
   hideSummary = true
   disableSpecial1stPost = true
   ShowSearch = true
+  customCSS = ["css/extended.css"]
 
 [pagination]
   pagerSize = 10000
