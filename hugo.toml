@@ -12,6 +12,6 @@ theme = 'PaperMod'
 [params]
   ShowPostNavLinks = true
   hideSummary=true
-  disableSpecail1stPost=ture
+  disableSpecial1stPost = true
 [pagination]
   pagerSize = 3
