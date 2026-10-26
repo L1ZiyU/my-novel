@@ -23,7 +23,7 @@ theme = 'PaperMod'
   ShowSearch = true
 
 [pagination]
-  pagerSize = 25
+  pagerSize = 3
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
