@@ -2,10 +2,10 @@
 {{- range .Site.RegularPages -}}
 {{- if (not .Params.hidden) -}}
 {
-    "title": "{{ .Title }}",
-    "permalink": "{{ .Permalink }}",
-    "content": "{{ .Plain | truncate 2000 }}",
-    "summary": "{{ .Plain | truncate 200 }}"
+    "title": {{ .Title | jsonify }},
+    "permalink": {{ .Permalink | jsonify }},
+    "content": {{ .Plain | truncate 2000 | jsonify }},
+    "summary": {{ .Plain | truncate 200 | jsonify }}
 },
 {{- end -}}
 {{- end -}}
