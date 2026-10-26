@@ -5,10 +5,16 @@ title = '黎梓语的小站'
 theme = 'PaperMod'
 
 [[menu.main]]
-    identifier = "categories"
-    name = "书架"
-    url = "/categories/"
-    weight = 20
+  identifier = "categories"
+  name = "书架"
+  url = "/categories/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 10
 [params]
   ShowPostNavLinks = true
   hideSummary=true
