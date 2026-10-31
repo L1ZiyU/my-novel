@@ -1,5 +1,19 @@
 <style>
-  body, .main, header, footer, .post-content, .post-entry, .my-floating-nav, .my-floating-nav a, .my-floating-nav span {
-      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease !important;
+  /* 网页主体平滑过渡 */
+  body, .main, header, footer, .post-content, .post-entry, 
+  .my-floating-nav, .my-floating-nav a, .my-floating-nav span,
+  .top-link, .top-link svg {
+      transition: background-color 0.4s ease, 
+                  color 0.4s ease, 
+                  border-color 0.4s ease, 
+                  fill 0.4s ease, 
+                  stroke 0.4s ease !important;
+  }
+
+  /* 浏览器最右侧滚动条的平滑过渡 */
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb {
+      transition: background-color 0.4s ease, border-color 0.4s ease !important;
   }
 </style>
